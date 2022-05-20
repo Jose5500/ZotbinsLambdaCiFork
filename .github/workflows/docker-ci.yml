@@ -18,8 +18,8 @@ jobs:
 
     - uses: actions/checkout@v3
 
-#     - name: Create a TimescaleDB docker instance and start it
-#       run: docker run -d --name timescaledbci -p 5432:5432 -e POSTGRES_PASSWORD=password timescale/timescaledb:latest-pg12
+    - name: Create a TimescaleDB docker instance and start it
+      run: docker run -d --name timescaledbci -p 5432:5432 -e POSTGRES_PASSWORD=password timescale/timescaledb:latest-pg12
 
 #     - name: setup python
 #       uses: actions/setup-python@v2
