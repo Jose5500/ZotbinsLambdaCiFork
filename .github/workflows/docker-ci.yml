@@ -26,6 +26,6 @@ jobs:
       with:
         python-version: 3.8 #install the python version needed
 
-#     - name: execute dummy data script #inserts data
-#       run: |
-#         python dummy_test_script.py
+    - name: execute dummy data script #inserts data
+      run: |
+        python dummy_test_script.py
