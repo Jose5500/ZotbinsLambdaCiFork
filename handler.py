@@ -3,7 +3,7 @@ from controllers import bin_controller, metrics_controller
 from datetime import datetime
 from utils import encoder
 
-
+#test
 def hello(event, context):
     """
     Test function returning default message
