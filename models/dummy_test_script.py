@@ -185,9 +185,7 @@ if __name__ == '__main__':
     id_dict = dict()
     for entity in [BinInfo,WeightSensor,FullnessSensor,UsageSensor,WeightMetric,FullnessMetric,UsageMetric]: _get_ids(id_dict, entity, session)
 
-    #Generates Random Bin
-    if input('Would you like to create a new bin, which is 3 BinInfo objects and 9 sensor objects? (type yes for yes, anything else for no): ') == "yes":
-        gen_Bin(id_dict, session)
+    gen_Bin(id_dict, session)
 
     #Gathers possible Usage, Weight, and Fullness Sensors
     fullness_sensors = [identification for identification, obj_type in id_dict.items() if obj_type == FullnessSensor] 
