@@ -18,7 +18,7 @@ def adding_new_bin_tests():
     query_not_existing_bin = (session.query(BinInfo).filter(BinInfo.id == -2))
 
     assert len(query_newly_added_bin.all()) == 1
-    assert len(query_not_existing_bin.all()) == 1
+    assert len(query_not_existing_bin.all()) == 0
 
 def removing_bin_tests():
     query_bin_to_remove = (session.query(BinInfo).filter(BinInfo.id == -1))
