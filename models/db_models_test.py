@@ -21,9 +21,20 @@ def adding_new_bin_tests():
     assert len(query_not_existing_bin.all()) == 1
 
 def removing_bin_tests():
-    session.delete()
+    query_bin_to_remove = (session.query(BinInfo).filter(BinInfo.id == -1))
+    previous_number_of_bins = len(session.query(BinInfo).all())
+
+    session.delete(query_bin_to_remove)
+
+    new_number_of_bins = len(session.query(BinInfo).all())
+
+    assert new_number_of_bins == previous_number_of_bins - 1
+
+    query_removed_bin = (session.query(BinInfo).filter(BinInfo.id == -1))
+    assert len(query_removed_bin.all()) == 0
 
 
 
 if __name__ == '__main__':
     adding_new_bin_tests()
+    removing_bin_tests()
