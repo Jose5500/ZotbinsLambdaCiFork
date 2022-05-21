@@ -35,3 +35,7 @@ jobs:
     - name: print content
       run: |
         python models/dummy_test_print.py
+    
+    - name: run tests
+      run: |
+        python models/db_models_test.py
