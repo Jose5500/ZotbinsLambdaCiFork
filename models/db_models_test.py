@@ -13,11 +13,12 @@ def adding_new_bin_tests():
 
     new_number_of_bins = len(session.query(BinInfo).all())
     assert previous_number_of_bins == new_number_of_bins - 1
-    result1 = (session.query(BinInfo).filter(BinInfo.id == -1))
-    result2 = (session.query(BinInfo).filter(BinInfo.id == -2))
 
-    print(f'result1 = {result1.all()}')
-    print(f'result2 = {result2.all()}')
+    query_newly_added_bin = (session.query(BinInfo).filter(BinInfo.id == -1))
+    query_not_existing_bin = (session.query(BinInfo).filter(BinInfo.id == -2))
+
+    assert len(query_newly_added_bin.all()) == 1
+    assert len(query_not_existing_bin.all()) == 0
 
 
 
