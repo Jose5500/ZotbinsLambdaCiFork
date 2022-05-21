@@ -14,8 +14,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - run: echo "This will hopefully run"
-
     - uses: actions/checkout@v3
 
     - name: Create a TimescaleDB docker instance and start it
@@ -32,9 +30,6 @@ jobs:
     - name: execute dummy data script #inserts data
       run: |
         python models/dummy_test_script.py
-    - name: print content
-      run: |
-        python models/dummy_test_print.py
     
     - name: run tests
       run: |
