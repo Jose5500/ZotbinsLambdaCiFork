@@ -28,4 +28,4 @@ jobs:
 
     - name: execute dummy data script #inserts data
       run: |
-        python dummy_test_script.py
+        python models/dummy_test_script.py
