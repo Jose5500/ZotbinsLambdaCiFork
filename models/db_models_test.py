@@ -14,7 +14,7 @@ def adding_new_bin_tests():
     new_number_of_bins = len(session.query(BinInfo).all())
     assert previous_number_of_bins == new_number_of_bins - 1
 
-    print(session.query(BinInfo).filter(BinInfo.id == -1))
+    print(session.execute(session.query(BinInfo).filter(BinInfo.id == -1)))
 
 
 
