@@ -1,3 +1,5 @@
+from sqlalchemy import text
+
 from db_models import BinType, BinInfo, Sensor, WeightSensor, FullnessSensor, UsageSensor
 from db_models import WeightMetric, FullnessMetric, UsageMetric
 from dummy_test_script import session
@@ -12,7 +14,7 @@ def adding_new_bin_tests():
     new_number_of_bins = len(session.query(BinInfo).all())
     assert previous_number_of_bins == new_number_of_bins - 1
 
-    print(session.execute("SELECT * FROM BinInfo WHERE id = -1"))
+    print(session.execute(text("SELECT * FROM BinInfo WHERE id = -1")))
 
 
 
