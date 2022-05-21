@@ -5,7 +5,7 @@ from dummy_test_script import session
 
 def adding_new_bin_tests():
     previous_number_of_bins = len(session.query(BinInfo).all())
-    new_bin = BinInfo(id=-1, uuid=-1, lat=-1, lon=-1, bin_type=-1)
+    new_bin = BinInfo(id=-1, uuid=-1, lat=-1, lon=-1, bin_type="T")
 
     print(f'previous_number_of_bins = {previous_number_of_bins}')
 
