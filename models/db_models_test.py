@@ -24,7 +24,7 @@ def removing_bin_tests():
     query_bin_to_remove = (session.query(BinInfo).filter(BinInfo.id == -1))
     previous_number_of_bins = len(session.query(BinInfo).all())
 
-    session.delete(query_bin_to_remove)
+    session.delete(query_bin_to_remove.all()[0])
 
     new_number_of_bins = len(session.query(BinInfo).all())
 
