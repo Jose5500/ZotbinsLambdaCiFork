@@ -1,5 +1,3 @@
-from sqlalchemy import text
-
 from db_models import BinType, BinInfo, Sensor, WeightSensor, FullnessSensor, UsageSensor
 from db_models import WeightMetric, FullnessMetric, UsageMetric
 from dummy_test_script import session
