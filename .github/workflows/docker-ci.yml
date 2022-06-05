@@ -25,7 +25,7 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: execute dummy data script #inserts data
-      run: python models/dummy_test_script.py
+      run: python models/ci_dummy_test_script.py
 
     - name: pass user input
       run: echo "yes"
@@ -37,4 +37,4 @@ jobs:
 
     - name: run tests
       run: |
-        python models/dummy_test_script_tests.py
+        python models/ci_dummy_test_script_tests.py
