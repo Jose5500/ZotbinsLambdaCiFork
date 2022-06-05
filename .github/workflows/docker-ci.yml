@@ -35,4 +35,4 @@ jobs:
     
     - name: run tests
       run: |
-        python models/db_models_test.py
+        python models/dummy_test_script_tests.py
