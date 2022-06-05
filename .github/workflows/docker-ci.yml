@@ -5,12 +5,12 @@ on:
   pull_request:
 
 jobs:
+
   build:
 
     runs-on: ubuntu-latest
 
     steps:
-
     - uses: actions/checkout@v3
 
     - name: Create a TimescaleDB docker instance and start it
@@ -25,16 +25,9 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: execute dummy data script #inserts data
-      run: python models/ci_dummy_test_script.py
-
-    - name: pass user input
-      run: echo "yes"
-
-
-    - name: print content
       run: |
-        python models/dummy_test_print.py
+        python models/ci_test_script.py
 
     - name: run tests
       run: |
-        python models/ci_dummy_test_script_tests.py
+        python models/ci_test_script_tests.py
