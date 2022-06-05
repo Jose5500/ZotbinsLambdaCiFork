@@ -1,5 +1,5 @@
-from models.db_models import BinInfo, FullnessSensor, UsageSensor, WeightSensor
-from models.dummy_test_script import _get_ids, session, gen_Bin, gen_FullnessMetric, gen_UsageMetric, gen_WeightMetric
+from db_models import BinInfo, FullnessSensor, UsageSensor, WeightSensor
+from dummy_test_script import _get_ids, session, gen_Bin, gen_FullnessMetric, gen_UsageMetric, gen_WeightMetric
 
 if __name__ == '__main__':
     # Puts all the possible ID's in a dictionary whose value is its associated object
