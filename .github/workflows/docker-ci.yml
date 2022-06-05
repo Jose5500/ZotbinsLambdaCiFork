@@ -24,11 +24,11 @@ jobs:
     - name: install necessary python modules
       run: pip install -r requirements.txt
 
-    - name: pass user input
-      run: echo "yes"
-
     - name: execute dummy data script #inserts data
       run: python models/dummy_test_script.py
+
+    - name: pass user input
+      run: echo "yes"
 
 
     - name: print content
