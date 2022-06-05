@@ -24,10 +24,11 @@ jobs:
     - name: install necessary python modules
       run: pip install -r requirements.txt
 
-    - name: execute dummy data script #inserts data
-      run: python models/dummy_test_script.py
     - name: pass user input
       run: echo "${{ github.event.inputs.message }} ${{ fromJSON('["", ""]')[github.event.inputs.use-emoji == 'true'] }} ${{ github.event.inputs.name }}"
+
+    - name: execute dummy data script #inserts data
+      run: python models/dummy_test_script.py
 
 
     - name: print content
