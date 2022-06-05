@@ -29,6 +29,7 @@ jobs:
     - name: execute dummy data script #inserts data
       run: |
         python models/dummy_test_script.py
+        echo: "yes"
     - name: print content
       run: |
         python models/dummy_test_print.py
