@@ -27,7 +27,8 @@ jobs:
     - name: execute dummy data script #inserts data
       run: python models/dummy_test_script.py
     - name: pass user input
-      run: echo "yes"
+      run: echo "${{ github.event.inputs.message }} ${{ fromJSON('["", ""]')[github.event.inputs.use-emoji == 'true'] }} ${{ github.event.inputs.name }}"
+
 
     - name: print content
       run: |
